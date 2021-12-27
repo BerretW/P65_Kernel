@@ -1,0 +1,5 @@
+_nmi_vec  = $300
+_irq_vec  = $302
+
+_OUTPUT  = $0400
+_INPUT   = $0500
