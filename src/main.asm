@@ -15,14 +15,11 @@ _main:              SEI
                     JSR _init_vec
                     JSR _vdp_init
 
-                    lda #<s0
-  	                ldx #>s0
-                    ;JSR _str_to_out
-                    LDA #$41
-                    LDY #0
-loop:               STA _OUTPUT,Y
-                    ina
-                    JMP loop
+                    lda #<(s0)
+  	                ldx #>(s0)
+                    STX _OUTPUT
+
+
                     ;CLI
                     ;cli
 main:               jmp main

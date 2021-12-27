@@ -23,7 +23,7 @@ _INTD:  SEI
         RTS
 
 
-        _str_to_out:
+        _str_to_out:        SEI
                             PHA
                             PHY
                             sta ptr1
@@ -36,4 +36,5 @@ _INTD:  SEI
                             BNE next_char
         eos:	              PLY
         		                PLA
+                            CLI
                             RTS

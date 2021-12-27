@@ -1,3 +1,4 @@
+.include "macros_65C02.inc65"
 .include "P65.inc65"
 
 .setcpu		"65C02"
@@ -31,7 +32,8 @@ _irq_int:     JMP (_irq_vec)
 
 
 
-_print:             LDY #0
+_print:             phaxy
+                    LDY #0
 @print:             LDA _OUTPUT,Y
                     BEQ @end
 
@@ -40,7 +42,8 @@ _print:             LDY #0
                     STA _OUTPUT,Y
                     INY
                     BNE @print
-@end:               RTS
+@end:               plaxy
+                    RTS
 
 _NMI_ISR:
                     PHA

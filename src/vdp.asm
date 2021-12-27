@@ -521,7 +521,7 @@ vdp_base_table_hi:
 vdp_base_table_txt:
                     	.Byte	1	; Short delay
                     	.Byte	%00000000		; R0 - No-extvid $00
-                    	.Byte	%11110000		; R1 - 16K,Disp-enable,Int-enable,TXT,8x8,No-mag 
+                    	.Byte	%11110000		; R1 - 16K,Disp-enable,Int-enable,TXT,8x8,No-mag
                     	.WORD	$0800			; screen image table table
                     	.byte	$0800>>10		; R2 screen image table table value
                     	.WORD	0				; Colour table NA
